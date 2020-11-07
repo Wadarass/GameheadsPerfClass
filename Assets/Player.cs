@@ -6,7 +6,7 @@ using UnityEditor;
 public class Player : MonoBehaviour
 {
     static int xAmount = 100;
-    static int yAmount = 10;
+    static int yAmount = 20;
     static float spacing = 5.0f;
 
     [MenuItem("Gameheads/SpawnCover")]
@@ -38,6 +38,6 @@ public class Player : MonoBehaviour
 
     private void FindClosestCover()
     {
-
+        CoverManager.Instance.FindClosestCover(this);
     }
 }

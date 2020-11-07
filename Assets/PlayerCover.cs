@@ -10,9 +10,13 @@ public class PlayerCover : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnEnable()
     {
-        
+        CoverManager.Instance.RegisterCover(this);
+    }
+
+    public void OnDisable()
+    {
+        CoverManager.Instance.DeregisterCover(this);
     }
 }
