@@ -1,22 +1,22 @@
 class IntegerStack
 {
-    IntegerStack(int capacity);
-    ~IntegerStack();
+    public:
+        IntegerStack(int capacity);
+        ~IntegerStack();
 
-    void Push(int value);
-
-    int Pop();
+        void Push(int value);
+        int Pop();
 
 private:
 
-struct Node
-{
-    int value;
-    Node* next;
-};
+    struct Node
+    {
+        int value;
+        Node* next;
+    };
 
-   Node* m_top = null;
-   int size;
+    Node* m_top = null;
+    int size;
 };
 
 IntegerStack::IntegerStack()
